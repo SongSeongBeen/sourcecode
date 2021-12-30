@@ -39,3 +39,26 @@ create sequence seq_author_id
 increment by 1
 start with 1
 nocache; --디폴트
+
+select book_id,
+       title,
+       pubs,
+       pub_date,
+       au.author_name
+from book bo, author au
+where bo.author_id = au.author_id
+and   (title, pubs, author_name) in (select bo.title,
+                                            bo.pubs,
+                                            au.author_name
+                                     from book bo, author au
+                                     where title like '%문%' 
+                                     or pubs like '%문%'
+                                     or author_name like '%문%')
+order by book_id asc;
+
+
+
+
+
+
+
