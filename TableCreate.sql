@@ -75,21 +75,21 @@ create table guestbook(
 );
 
 --시퀀스 생성
-CREATE SEQUENCE seq_guestbook
+CREATE SEQUENCE seq_guestbook_no
 INCREMENT BY 1 
 start with 1 
 nocache;
 
 insert into guestbook
-values(seq_guestbook.nextval, '송성빈', '1234', '출췍완료', sysdate);
+values(seq_guestbook_no.nextval, '송성빈', '1234', '출췍완료', sysdate);
 insert into guestbook
-values(seq_guestbook.nextval, '전지현', '1234', '출췍완료', sysdate);
+values(seq_guestbook_no.nextval, '전지현', '1234', '출췍완료', sysdate);
 insert into guestbook
-values(seq_guestbook.nextval, '장동건', '1234', '출췍완료', sysdate);
+values(seq_guestbook_no.nextval, '장동건', '1234', '출췍완료', sysdate);
 insert into guestbook
-values(seq_guestbook.nextval, '원빈', '1234', '출췍완료', sysdate);
+values(seq_guestbook_no.nextval, '원빈', '1234', '출췍완료', sysdate);
 insert into guestbook
-values(seq_guestbook.nextval, '임수정', '1234', '출췍완료', sysdate);
+values(seq_guestbook_no.nextval, '임수정', '1234', '출췍완료', sysdate);
 
 commit;
 
