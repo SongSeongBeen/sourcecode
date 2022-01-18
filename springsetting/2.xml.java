@@ -2,7 +2,7 @@
 // web.xml : DispatcherServlet 정의 
 //</welcome-file-list>  밑에 붙여넣기
 
-//<!-- DispatChServlet Mapping : Front Controller 등록 -->
+<!-- DispatChServlet Mapping : Front Controller 등록 -->
 <servlet>
 	<servlet-name>spring</servlet-name>
 	<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
@@ -15,7 +15,7 @@
 
 
 ///////////////////////////////////////////////////////////////////////////////////////
-//<!-- 한글처리 -->
+<!-- 한글처리 -->
 <filter>
         <filter-name>encodingFilter</filter-name>
         <filter-class>org.springframework.web.filter.CharacterEncodingFilter</filter-class>
