@@ -2,7 +2,9 @@
 // -> 파일만들때 Generate web.xml deployment.descriptor[체크!!!] -> 파일생성 WEB-INF-> web.xml 경로 -
 
 // 2.new configure -> convert to Maven project 생성
-// pom.xml 설정 : Spring Library 의존성 추가 
+
+// [pom.xml 설정 : Spring Library 의존성 추가]
+
 //<packaging>war</packaging> pom.xml 밑에 붙여 넣기
 
 <properties>
