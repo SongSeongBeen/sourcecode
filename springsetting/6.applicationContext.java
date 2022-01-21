@@ -1,5 +1,5 @@
 
-//ApplicationContext.xml 파일생성후 붙여넣기
+//applicationContext.xml 파일생성후 붙여넣기    대소문자 구문 ////////////////////////////////////
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aop="http://www.springframework.org/schema/aop" xmlns:context="http://www.springframework.org/schema/context"
    xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
@@ -25,16 +25,30 @@
 
 </beans>
 
+///////////////////////////web.xml 경로 파일 등록!!!!!!!!!!!!!!!!//////////////////////////////
 
-///////////////////////////ApplicationContext 경로값 xml에 등록//////////////////////////////
-//Xml 파일에 넣기
-<!-- Context Listener 등록 -->
-<listener>
-<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
-</listener>
 
-<context-param>
-<param-name>contextConfigLocation</param-name>
-<param-value>/WEB-INF/applicationContext.xml</param-value>
-</context-param>
+///////////////////////////applicationContext.xml : OracleDataSource bean//////////////////////////////
+<!-- oracle datasource -->
+<bean id="oracleDatasource" class="oracle.jdbc.pool.OracleDataSource" destroy-method="close">
+    <property name="URL" value="jdbc:oracle:thin:@localhost:1521:xe" />
+    <property name="user" value="webdb" />
+    <property name="password" value="webdb" />
+    <property name="connectionCachingEnabled" value="true" />
+    <qualifier value="main-db" />
+</bean>
+
+
+////////////////////////////////applicationContext.xml : Mybatis/////////////////////////////////////////
+<!-- MyBatis SqlSessionFactoryBean  설정-->
+<bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+	<property name="dataSource" ref="oracleDatasource" />
+	<property name="configLocation" value="classpath:mybatis/configuration.xml" />
+</bean>
+
+
+<!-- MyBatis SqlSessionTemplate  설정-->
+<bean id="sqlSession" class="org.mybatis.spring.SqlSessionTemplate">
+	<constructor-arg index="0" ref="sqlSessionFactory" />
+</bean>
 

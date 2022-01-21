@@ -35,5 +35,16 @@
         <url-pattern>/*</url-pattern>
 </filter-mapping>
 
+///////////////////////////ApplicationContext 파일 만들고 경로값 xml에 등록//////////////////////////////*/
+<!-- Context Listener 등록 -->
+<listener>
+<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+</listener>
+
+<context-param>
+<param-name>contextConfigLocation</param-name>
+<param-value>/WEB-INF/applicationContext.xml</param-value>
+</context-param>
+
 
 

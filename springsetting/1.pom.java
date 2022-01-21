@@ -14,6 +14,13 @@
 
 <dependencies>
 
+      //라이브러리 추가
+
+</dependencies>
+
+//<!--spring 설정 pom.xml : 라이브러리 추가 -->
+///기본 라이브러리///////////////////////////////////////
+
 	<!-- spring container(core) -->
 	<dependency>
 		<groupId>org.springframework</groupId>
@@ -34,6 +41,31 @@
 		<artifactId>spring-webmvc</artifactId>
 		<version>${org.springframework-version}</version>
 	</dependency>
+	
+////////////////////////데이터 소스///////////////////////	
+	
+	<!-- spring jdbc -->
+	<dependency>
+		<groupId>org.springframework</groupId>
+		<artifactId>spring-jdbc</artifactId>
+		<version>${org.springframework-version}</version>
+	</dependency>
 
-</dependencies>
+//<!-- Mybatis 설정 pom.xml : 라이브러리 추가 -->
+
+	<!-- MyBatis -->
+	<dependency>
+		<groupId>org.mybatis</groupId>
+		<artifactId>mybatis</artifactId>
+		<version>3.2.2</version>
+	</dependency>
+
+	<dependency>
+		<groupId>org.mybatis</groupId>
+		<artifactId>mybatis-spring</artifactId>
+		<version>1.2.0</version>
+	</dependency>
+	
+
+
 
