@@ -1,5 +1,8 @@
+import org.springframework.stereotype.Repository;
 
 //applicationContext.xml 파일생성후 붙여넣기    대소문자 구문 ////////////////////////////////////
+//필요한 클래스에 @Repository 사용 가능하게 설정
+
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aop="http://www.springframework.org/schema/aop" xmlns:context="http://www.springframework.org/schema/context"
    xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd

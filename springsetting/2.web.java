@@ -36,6 +36,7 @@
 </filter-mapping>
 
 ///////////////////////////ApplicationContext 파일 만들고 경로값 xml에 등록//////////////////////////////*/
+///////////////////////////ApplicationContext 파일 만들고 @Repository 사용 가능하게  web에 설정//////////////////////////////*/
 <!-- Context Listener 등록 -->
 <listener>
 <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
