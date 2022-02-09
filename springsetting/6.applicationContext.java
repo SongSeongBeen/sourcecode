@@ -1,5 +1,3 @@
-import org.springframework.stereotype.Repository;
-
 //applicationContext.xml 파일생성후 붙여넣기    대소문자 구문 ////////////////////////////////////
 //필요한 클래스에 @Repository 사용 가능하게 설정
 
