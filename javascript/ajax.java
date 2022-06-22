@@ -1,5 +1,5 @@
 $.ajax({
-	      url : "${pageContext.request.contextPath }/api/gb/add",      
+	      url : "${pageContext.request.contextPath}/api/gb/add",      
 	      type : "post",
 	      contentType : "application/json",
 	      data : {name: ”홍길동"},
